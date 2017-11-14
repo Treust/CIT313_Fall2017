@@ -1,13 +1,15 @@
 <?php
-class Users extends Model {
+class Users extends Model{
 
-public function __construct(){
+	// Constructor
+	public function __construct(){
 		parent::__construct();
 		}
 
 	public function getUser($uID){
 		$sql = 'SELECT uID, first_name, last_name, email, password FROM users WHERE uID = ?';
 
+		// perform query
 		$results = $this->db->getrow($sql, array($uID));
 		$user = $results;
 		return $user;
@@ -19,6 +21,7 @@ public function __construct(){
 		}
 		$sql = 'SELECT uID, first_name, last_name, email, password FROM users'.$numusers;
 
+		// perform query
 		$results = $this->db->execute($sql);
 
 		while ($row=$results->fetchrow()) {
@@ -27,6 +30,7 @@ public function __construct(){
 		return $users;
 	}
 
+	//Correct addUser method
 
 	public function addUser($data){
 		$sql = 'INSERT INTO users (first_name, last_name, email, password) VALUES (?,?,?,?)';
@@ -35,18 +39,6 @@ public function __construct(){
 		return $message;
 	}
 
-
-	public function addUser($data){
-		var_dump($data)
-		$uID = $_POST["post_uID"];
-		$email = $_POST["post_email"];
-		$password = $_POST['post_password'];
-		$fname = $_POST['post_fname'];
-		$lname = $_POST['post_lname'];
-		$sql="INSERT INTO users (email, password, first_name, last_name) VALUES (?,?)";
-		$this->db->execute($sql,$data);
-		$message = 'User added.';
-		return $message;
-	}
+	
 
 }
