@@ -17,6 +17,12 @@ if( is_array($post) ) {
 
 
     </div>
+    <div class="row">
+        <div class="span8">
 
+          <a href="<?php echo BASE_URL;?> "comments/saveComment" class="btn btn-primary">Comment</a>
+
+        </div>
+      </div>
 
 <?php include('views/elements/footer.php');?>
