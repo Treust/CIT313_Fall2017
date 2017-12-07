@@ -7,7 +7,7 @@ class CommentsController extends Controller{
 	  protected $access = "1";
 
 		public function index() {
-
+			$this->set('task', 'saveComment');
 	    }
 
 		public function saveComment(){
