@@ -8,7 +8,7 @@ class WeatherController extends Controller{
 	 	}
 	     public function getresults() {
 
-	 		$worky = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=5a873c6668524995842224009171211&q=".$_POST['zip']."&format=xml&num_of_days=2";
+	 	$xml = simplexml_load_file( "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=bcfd78c0e94f45b0bc7154531171112&q=".$_POST['zip']."&format=xml&num_of_days=2");
 
 
 	         $this->set(result,true);

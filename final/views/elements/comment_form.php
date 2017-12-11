@@ -1,7 +1,7 @@
 <form id="comment_form" action="<?php echo BASE_URL;?>comment/<?php echo $task?>" method="post" onsubmit="editor.post()">
 
 <fieldset>
-<legend>Register Today!</legend>
+<legend>Comment Now!</legend>
 
 
 
@@ -18,6 +18,6 @@ date_default_timezone_set('America/Indiana/Indianapolis');?>
   <input type="hidden" name="uID" value="<?php echo $uID?>"/>
   <input type="hidden" name="postID" value="<?php echo $pID?>"/>
 
-<button id="submit" type="submit" class="btn btn-primary" >Sign Up</button>
+<button id="submit" type="submit" class="btn btn-primary" >Get Comments</button>
 </fieldset>
 </form>
