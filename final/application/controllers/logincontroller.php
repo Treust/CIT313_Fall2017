@@ -19,7 +19,7 @@ unset($_SESSION['redirect']);
 header('Location: '.BASE_URL.$view);
 }
 }
-else if ($this->!$userInfo->isActive())
+else if (!$this->userObject->isActive())
 {
 header('Location: '.BASE_URL);
 }
